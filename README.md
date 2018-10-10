@@ -14,8 +14,10 @@
 
 Note: drive.py is originally from the [Udacity Behavioral Cloning project](https://github.com/udacity/CarND-Behavioral-Cloning-P3) but it has been slightly modified.
 
-# Install dependencies
+# Software dependencies
 The environments.yml or environments-gpu.yml file contains all required dependencies for the code to run. If we open .yml file using notebad we can read it to check if the dependencies available or not. If not available we can install it manually using the command ```pip install``` or ```conda install``` if we have installed conda. The other choice to run the code is creating a new conda enviroment using the command ```conda env create -f environments.yml ```(tensorflow-cpu) or ```conda env create -f environments-gpu.yml```(tensorflow-gpu). To create the enviroment we need [anaconda](https://www.continuum.io/downloads) or [miniconda](https://conda.io/miniconda.html) to be installed.
+
+After preparing the python enviroment for the project we need to install the [Udacity's Car Simulator](https://github.com/udacity/self-driving-car-sim) to train the data and test the model.
  
 # Generate training data
 The simulator is used to generate the training data.  The simulator has two modes training and autonomous. In the "training mode" the car can be controlled through a keyboard or joystick to generate training data. After pressing the record button on the right of the simulator window, it begins to collect data. The collected data consist of images captured by three cameras (left, center,  right) mounted on the car and corresponding steering angle, throttle and speed. after ending training a new folder 'IMG' and 'driving_log.csv' file are generated. The 'driving_log.csv' file consists of 7 columns ['center', 'left', 'right', 'steering', 'throttle', 'reverse', 'speed'] the first three hold the directory of center, left and right images and the later 4 hold steering, throttle, reverse, speed values.
@@ -92,9 +94,32 @@ The model was trained on windows machine with NVIDIA GeForce 920M GPU by running
 
 # Result
 
-By running ```drive.py``` script using the command ```python drive.py model.h5``` The model could successfully drive the car on the track. The video below shows the result.
+By running ```drive.py``` script, The model could successfully drive the car on the track. The video below shows the result.
 
  <p align="center"><a href="https://www.youtube.com/watch?v=JI-xxoZxkRU"><img src="https://github.com/maidaly/Cloning-Driver-Behavior-for-SelfDriving-Car/blob/master/assets/youtube_link_image_1.png"  width="400"></a></p> 
+ 
+# Installtion
+
+After downloading the required dependencies that mentioned in "software dependencies" section. we can now download the project through this git commands:
+
+```sh
+git clone https://github.com/maidaly/Cloning-Driver-Behavior-for-SelfDriving-Car.git
+cd Cloning-Driver-Behavior-for-SelfDriving-Car
+```
+**Usage**
+
+- For creating new model we can run the command ``` python model.py ``` after creating the training data using the simulator on the training mode.
+
+- For driving using the model in the repo we can run the command ``` python drive.py model.h5 ``` and adjusting the simulator to be on the autonomous mode.
+
+# References: 
+
+[1]  M. Bojarski, B. Firner, B. Flepp, L. Jackel, U. Muller, K. Zieba and D. Del Testa,  'End-to-End Deep Learning for Self-Driving Cars'  *NVIDIA Developer Blog* 2016  [Online]. Available: https://devblogs.nvidia.com/deep-learning-self-driving-cars/
+
+[2] Udacity, 'Behavioral Cloning Project'  [Online]. Available: https://github.com/udacity/CarND-Behavioral-Cloning-P3
+'
+
+
 
 
 
