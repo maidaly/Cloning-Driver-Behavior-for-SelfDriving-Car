@@ -11,6 +11,7 @@
 - model.h5: The generated file from training which contains the resulting wights.
 - environments.yml: conda environment (Used to generate new conda enviroment to run the project with tensorflow-cpu)
 - environments-gpu.yml: conda environment (Used to generate new conda enviroment to run the project with tensorflow-gpu)
+- data_exploring_notebook.ipynb:  notebook for exploring the data.
 
 Note: drive.py is originally from the [Udacity Behavioral Cloning project](https://github.com/udacity/CarND-Behavioral-Cloning-P3) but it has been slightly modified.
 
@@ -90,7 +91,7 @@ The model Summary:
 
 # Training
 
-The model was trained on windows machine with NVIDIA GeForce 920M GPU by running the command ```python model.py -d data -t 0.2 -k 0.7 -n 5 -s 25000 -o False```. The parsed parameters are (-d) data directory which contains driving_log.csv file (the default value is data that is why there is folder called data in the repo to store driving_log.csv file inside it), (-t) test size fraction: 0.2, (-k) drop out probability: 0.7, (-n) number of epochs: 5, (-s) samples per epoch: 25000 and (-o) save best models only: False. The other parameters assigned to the default values.
+The model was trained on windows machine with NVIDIA GeForce 920M GPU by running the command ```python model.py -d data -t 0.2 -k 0.7 -n 5 -s 25000 -o False```. The parsed parameters are (-d) data directory which contains driving_log.csv file (the default value is data so to used the default we need to creat new folder with name "data" in the current directory and store "driving_log.csv" file inside it), (-t) test size fraction: 0.2, (-k) drop out probability: 0.7, (-n) number of epochs: 5, (-s) samples per epoch: 25000 and (-o) save best models only: False. The other parameters assigned to the default values.
 
 # Result
 
