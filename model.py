@@ -139,7 +139,7 @@ def main():
     parser.add_argument('-n', help='number of epochs',      dest='nb_epoch',          type=int,   default=10)
     parser.add_argument('-s', help='samples per epoch',     dest='samples_per_epoch', type=int,   default=20000)
     parser.add_argument('-b', help='batch size',            dest='batch_size',        type=int,   default=40)
-    parser.add_argument('-o', help='save best models only', dest='save_best_only',    type=s2b,   default='False')
+    parser.add_argument('-o', help='save best models only', dest='save_best_only',    type=s2b,   default='True')
     parser.add_argument('-l', help='learning rate',         dest='learning_rate',     type=float, default=1.0e-4)
     args = parser.parse_args()
 

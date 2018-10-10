@@ -58,11 +58,11 @@ def choose_image(data_dir, center, left, right, steering_angle):
     return load_image(data_dir, center), steering_angle
 
 
-def random_flip(image, steering_angle):
+def random_flip(image, steering_angle, force_flip = False):
     """
     Randomly flipt the image left <-> right, and adjust the steering angle.
     """
-    if np.random.rand() < 0.5:
+    if (force_flip or np.random.rand() < 0.5):
         image = cv2.flip(image, 1)
         steering_angle = -steering_angle
     return image, steering_angle
