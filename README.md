@@ -99,7 +99,8 @@ By running ```drive.py``` script, The model could successfully drive the car on 
 
  <p align="center"><a href="https://www.youtube.com/watch?v=JI-xxoZxkRU"><img src="https://github.com/maidaly/Cloning-Driver-Behavior-for-SelfDriving-Car/blob/master/assets/youtube_link_image_1.png"  width="400"></a></p> 
  
-# Installtion
+# Installation
+Dictionary result for installation
 
 After downloading the required dependencies that mentioned in "software dependencies" section. we can now download the project through this git commands:
 
